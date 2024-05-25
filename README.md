@@ -1,6 +1,6 @@
 # playground
 
-Simple typescript playground
+Simple typescript + react + mobx + tailwind playground
 
 ```
 # install dependencies

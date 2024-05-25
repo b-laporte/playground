@@ -1,7 +1,7 @@
 {
-    "name": "ts-playground",
+    "name": "ts-react-playground",
     "version": "0.0.1",
-    "description": "Simple typescript playground",
+    "description": "Simple typescript + react playground",
     "author": "Bertrand Laporte",
     "license": "MIT",
     "packageManager": "yarn@1.22.19",
@@ -10,18 +10,30 @@
         "clean": "rimraf dist lib",
         "build": "yarn clean && tsc && vite build",
         "build-all": "yarn build && vitest run && bash ghpages.bash",
-        "test": "vitest",
-        "coverage": "vitest run --coverage",
+        "test": "TZ=UTC vitest run",
+        "test:watch": "TZ=UTC vitest watch",
+        "coverage": "vitest run --coverage --coverage.include src --coverage.extension .ts",
         "dev": "vite",
         "serve": "vite preview"
     },
     "dependencies": {
+        "clsx": "^2.1.1",
+        "mobx": "^6.12.3",
+        "mobx-react-lite": "^4.0.7",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
-        "@vitest/coverage-v8": "^0.32.0",
-        "rimraf": "^5.0.1",
-        "typescript": "^4.9.4",
-        "vite": "^4.3.9",
-        "vitest": "^0.32.0"
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@vitejs/plugin-react": "^4.3.0",
+        "@vitest/coverage-v8": "^1.6.0",
+        "autoprefixer": "^10.4.19",
+        "postcss": "^8.4.38",
+        "rimraf": "^5.0.7",
+        "tailwindcss": "^3.4.3",
+        "typescript": "^5.4.5",
+        "vite": "^5.2.11",
+        "vitest": "^1.6.0"
     }
 }
